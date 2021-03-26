@@ -10,7 +10,7 @@ import report from '../modules/report'
 import systemManagement from '../modules/systemManagement'
 import BaseConfig from '../modules/BaseConfig'
 import token from '../modules/token'
-import xxxx from '../modules/xxxx'
+import meetingmanagement from '../modules/meetingmanagement'
 
 const env = process.env.NODE_ENV
 const devRouter = [
@@ -26,7 +26,7 @@ const devRouter = [
   ...systemManagement, // 菜单管理
   ...BaseConfig, // 基础信息
   ...token, // 口令工具
-  ...xxxx
+  ...meetingmanagement // 会议管理
 ]
 let router = []
 if (env === 'development') {
