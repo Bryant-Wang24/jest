@@ -1,0 +1,58 @@
+.table_new  th{
+  background: #FAFAFA;
+  color:#000000;
+  font-size: 14px;
+  font-weight: 500;
+  border: 0.5px solid #FAFAFA;
+}
+/* #filterForm{
+  padding:22px;
+  background: white;
+  border-radius: 2px;
+} */
+/* .content_new{
+  margin: 20px;
+  margin-bottom: 0;
+} */
+.el-dialog{
+  max-height:75%;
+  overflow: auto;
+}
+.el-select{
+  width: 100%;
+}
+/* .el-popover{
+  padding: 16px;
+}
+.el-popover .popover_oeder,.sortLeft{
+  float: left;
+  margin-bottom: 16px;
+}
+.popover_oeder .el-input-group__append, .el-input-group__prepend{
+  padding: 0 10px;
+}
+.el-popover i{
+  font-size: 20px;
+  margin: 6px;
+  transform: rotate(90deg);
+} */
+/* .el-table .cell{
+  color: #000000;
+} */
+.popover_oeder .el-input-group__append, .el-input-group__prepend{
+  padding: 0 10px;
+}
+.table_overflow .el-table__body{
+  /* background-color: black; */
+  /* opacity: 0.01; */
+}
+.table_overflow td{
+  border:0;
+  padding: 0;
+}
+.table_overflow::before{
+  height: 0;
+}
+.table_color .cell{
+  color: #666666;
+}

@@ -1,0 +1,7 @@
+// 非element组件主题色
+// 请保持与 element-variables.scss 的 $--color-primary 一致
+$--custom--color--primary: #035751;
+
+:export {
+  theme: $--custom--color--primary;
+}
