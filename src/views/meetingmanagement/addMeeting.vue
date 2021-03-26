@@ -5,7 +5,9 @@
     </div>
     <el-form ref="form" :model="form" label-width="120px">
       <el-form-item label="会议室">
-        <el-input v-model="form.room" :style="formStyle" placeholder="请填写会议室名称" />
+        <el-select v-model="form.room" placeholder="请选择活动区域">
+          <el-option label="会议室" value="shanghai" />
+        </el-select>
       </el-form-item>
       <el-form-item label="计划开始时间">
         <el-col :span="11">
@@ -25,7 +27,7 @@
       </el-form-item>
 
       <el-form-item>
-        <el-button type="primary" @click="onSubmit">立即创建</el-button>
+        <el-button type="primary" @click="onSubmit">保存</el-button>
         <el-button>取消</el-button>
       </el-form-item>
     </el-form>
@@ -48,6 +50,24 @@ export default {
         date2: '',
         name: '',
         person: ''
+      },
+      rules: {
+        room: [
+          { required: true, message: '请输入活动名称', trigger: 'blur' }
+          // { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
+        ],
+        date1: [
+          { required: true, message: '请选择时间', trigger: 'change' }
+        ],
+        date2: [
+          { type: 'date', required: true, message: '请选择时间', trigger: 'change' }
+        ],
+        name: [
+          { type: 'date', required: true, message: '', trigger: 'change' }
+        ],
+        person: [
+          { type: 'array', required: true, message: '请至少选择一个活动性质', trigger: 'change' }
+        ]
       }
     }
   },

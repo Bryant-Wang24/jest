@@ -37,6 +37,7 @@
 <script>
 import ListMixins from '@/mixins/ems/ListMixins'
 import api from '@/api/index'
+
 export default {
   name: 'KeepAlive',
   components: {},
@@ -173,11 +174,16 @@ export default {
         mobile: ''
       }
     },
+    created() {
+      this.getList()
+    },
     getList() {
+      const res = this.tableData
+      console.log(res)
     },
     toEdit(row) {
       // this.toRouter('SystemManagementUserEdit', { id: row.id })
-      this.$router.push({ name: 'Xxxx2' })
+      this.$router.push({ name: 'AddMeeting' })
     },
     toggleTreeDialog(isOpen) {
       this.treeDialogVisible = !!isOpen
